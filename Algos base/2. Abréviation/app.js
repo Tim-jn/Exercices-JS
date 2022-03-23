@@ -1,10 +1,14 @@
 function abreviation(str) {
 
+    let spacedName = str.trim().split(' ')
+    let firstName = spacedName.slice(0,1)
+    let firstLetter = spacedName[1].charAt(0)
     
+    return firstName + ' ' + firstLetter + '.'
 
 };
 
-console.log(abreviation("John")); // John D.
+console.log(abreviation("John Doe")); // John D.
 console.log(abreviation("Romy Schneider")); // Romy S.
 console.log(abreviation("             Alfred Hitchcock                 ")); // Alfred H.
 
