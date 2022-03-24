@@ -1,6 +1,13 @@
 function diviseTableau(tab, tailleMorceau) {
+    let result = []
+    let copy = [...tab]
 
+   while (copy.length > 0) {
+        let filtered = copy.splice(0, tailleMorceau)
+        result.push(filtered)
+    }
 
+    console.log(result);
 }
 
 
